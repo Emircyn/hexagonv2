@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-body-color;
+  }
+
+  table tr th:first-child,
+  table tr td:first-child {
+    @apply rounded-l-md;
+  }
+
+  table tr th:last-child,
+  table tr td:last-child {
+    @apply rounded-r-md;
+  }
+}
+
+@layer utilities {
+  .sidebar {
+    @apply w-[70px] h-screen fixed bg-sidebar-bg transition-all;
+  }
+
+  .sidebar.active {
+    @apply w-64;
+  }
+
+  .sidebar.active button {
+    @apply rotate-0;
+  }
+
+  .sidebar button {
+    @apply rotate-180 duration-300;
+  }
+
+  .navigation-link-text {
+    @apply font-bold;
+  }
+
+  .wrapper {
+    @apply relative w-full h-auto pl-[70px] transition-all;
+  }
+
+  .wrapper.active {
+    @apply pl-64;
+  }
+
+  .card {
+    @apply w-full rounded-md border bg-white;
+  }
+
+  .card .card-body {
+    @apply p-5;
+  }
+}
